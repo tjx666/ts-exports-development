@@ -1,0 +1,30 @@
+{
+    "name": "tools",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "tsup src/index.ts --format esm,cjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "exports": {
+        ".": {
+            "import": {
+                "development": "./src",
+                "default": "./dist/index.mjs"
+            },
+            "require": {
+                "development": "./src",
+                "default": "./dist/index.js"
+            }
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "*": [
+                "./src/*"
+            ]
+        }
+    }
+}
